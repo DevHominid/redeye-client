@@ -1,0 +1,32 @@
+.Menu {
+  background: #fff;
+  padding: 1.25rem 0;
+  width: 380px;
+}
+
+.Menu h1 {
+  border-bottom: 1px solid #D8D8D8;
+  font-size: 2.25rem;
+  margin: 0;
+  padding: 0 3.125rem 1.25rem 3.125rem;
+}
+
+.Menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem:hover {
+  background: #FA7E61!important;
+}
+
+.listItem button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 3.125rem;
+  text-align: left;
+  width: 100%;
+}

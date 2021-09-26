@@ -1,0 +1,42 @@
+.Dashboard {
+  display: flex;
+  height: 100%;
+}
+
+.container {
+  align-items: center;
+  background: #0F0905;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: center;
+}
+
+.noServiceSelected {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 77%;
+}
+
+.noServiceSelected h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 0 3rem 0;
+}
+
+.serviceWrapper {
+  height: 100%;
+  padding: 3.125rem;
+  width: 100%;
+}
+
+.serviceWrapper h1 {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 3rem;
+  margin: 0;
+  padding-bottom: 2rem;
+}
