@@ -1,0 +1,27 @@
+.Footer {
+  background: #0F0905;
+  height: 150px;
+  position: relative;
+  width: 100vw;
+}
+
+.Footer img {
+  bottom: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  width: 125px;
+}
+
+.copyright {
+  bottom: 1.5rem;
+  color: #fff;
+  font-size: 0.875rem;
+  left: 1rem;
+  position: absolute;
+}
+
+@media screen and (min-width: 48rem) and (min-height: 29.375rem) {
+  .Footer img {
+    width: 200px;
+  }
+}
