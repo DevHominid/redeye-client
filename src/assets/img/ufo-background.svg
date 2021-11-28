@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5761px" height="3260px" viewBox="0 0 5761 3260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(249.000000, 233.000000)">
+            <g id="Group-2" transform="translate(2744.838971, 245.500000) rotate(17.000000) translate(-2744.838971, -245.500000) translate(2485.338971, 154.000000)">
+                <ellipse id="Oval" stroke="#0F0905" stroke-width="7" fill-opacity="0.86" fill="#0F0905" cx="260.316599" cy="91.5180453" rx="114.5" ry="91"></ellipse>
+                <polygon id="Path-2" fill="#0F0905" points="0.747131447 182.867023 518.747131 182.867023 418.668419 94.8670232 98.972534 94.8670232"></polygon>
+                <ellipse id="Oval" fill="#E24328" opacity="0.235351562" transform="translate(87.178891, 141.481818) rotate(2.000000) translate(-87.178891, -141.481818) " cx="87.1788909" cy="141.481818" rx="13.8998324" ry="6.95453981"></ellipse>
+                <ellipse id="Oval" fill="#E24328" opacity="0.235351562" transform="translate(169.651163, 150.754545) rotate(1.000000) translate(-169.651163, -150.754545) " cx="169.651163" cy="150.754545" rx="13.8998239" ry="6.95454404"></ellipse>
+                <ellipse id="Oval" fill="#E24328" opacity="0.235351562" cx="251.873341" cy="157.421091" rx="14" ry="7.5"></ellipse>
+                <ellipse id="Oval" fill="#E24328" opacity="0.235351562" transform="translate(334.595707, 150.754545) rotate(-1.000000) translate(-334.595707, -150.754545) " cx="334.595707" cy="150.754545" rx="13.8998239" ry="6.95454404"></ellipse>
+                <ellipse id="Oval" fill="#E24328" opacity="0.235351562" transform="translate(417.067979, 141.481818) rotate(-2.000000) translate(-417.067979, -141.481818) " cx="417.067979" cy="141.481818" rx="13.8998324" ry="6.95453981"></ellipse>
+            </g>
+            <path d="M2653.04965,322.348079 C2687.65446,357.014745 2727.65446,374.348079 2773.04965,374.348079" id="Path-3" stroke="#0F0905" stroke-width="12" transform="translate(2713.049649, 348.348079) rotate(-4.000000) translate(-2713.049649, -348.348079) "></path>
+            <path d="M2622.86332,351.284744 C2674.77053,403.284744 2734.77053,429.284744 2802.86332,429.284744" id="Path-3" stroke="#0F0905" stroke-width="24" transform="translate(2712.863317, 390.284744) rotate(-4.000000) translate(-2712.863317, -390.284744) "></path>
+            <path d="M2555.67699,368.221409 C2642.18901,454.888076 2742.18901,498.221409 2855.67699,498.221409" id="Path-3" stroke="#0F0905" stroke-width="36" transform="translate(2705.676985, 433.221409) rotate(-4.000000) translate(-2705.676985, -433.221409) "></path>
+            <path d="M2426.21163,389.167818 C2564.63087,527.834485 2724.63087,597.167818 2906.21163,597.167818" id="Path-3" stroke="#0F0905" stroke-width="60" transform="translate(2666.211628, 493.167818) rotate(-4.000000) translate(-2666.211628, -493.167818) "></path>
+            <path d="M2224.21116,408.063072 C2449.14243,633.396406 2709.14243,746.063072 3004.21116,746.063072" id="Path-3" stroke="#0F0905" stroke-width="96" transform="translate(2614.211156, 577.063072) rotate(-4.000000) translate(-2614.211156, -577.063072) "></path>
+            <path d="M1921.4663,448.91448 C2284.81682,812.91448 2704.81682,994.91448 3181.4663,994.91448" id="Path-3" stroke="#0F0905" stroke-width="156" transform="translate(2551.466301, 721.914480) rotate(-4.000000) translate(-2551.466301, -721.914480) "></path>
+            <path d="M1590,541.651397 C2178.28179,1130.98473 2858.28179,1425.6514 3630,1425.6514" id="Path-3" stroke="#0F0905" stroke-width="252" transform="translate(2610.000000, 983.651397) rotate(-4.000000) translate(-2610.000000, -983.651397) "></path>
+            <path d="M74.6100629,183.651397 C1614.52415,1726.31806 3394.52415,2497.6514 5414.61006,2497.6514" id="Path-3" stroke="#0F0905" stroke-width="660" transform="translate(2744.610063, 1340.651397) rotate(-4.000000) translate(-2744.610063, -1340.651397) "></path>
+        </g>
+    </g>
+</svg>
