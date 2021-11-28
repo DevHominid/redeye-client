@@ -18,6 +18,11 @@ export interface ContentTypeOverrides {
   xml: ContentTypes[];
 }
 
+export interface CORS {
+  domains: string[];
+  enabled: boolean;
+}
+
 export interface LoginRoute {
   enabled: boolean;
   endpoint: string;
@@ -108,9 +113,9 @@ export interface Router {
 
 export interface Service {
   id: string;
-  corsDomains?: string[];
-  login?: LoginRoute;
+  cors: CORS;
+  login: LoginRoute;
   name: string;
-  register?: RegisterRoute;
+  register: RegisterRoute;
   routers: Router[];
 }
