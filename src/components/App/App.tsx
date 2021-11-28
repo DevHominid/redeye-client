@@ -7,6 +7,7 @@ import { faDatabase, faLock, faToolbox } from '@fortawesome/free-solid-svg-icons
 import Footer from '../Footer';
 import Header from '../Header';
 import Landing from '../Landing';
+import Login from '../Login';
 import styles from './App.module.css';
 
 library.add(faDatabase, faHdd, faLock, faToolbox);
@@ -17,9 +18,9 @@ function App() {
     <Router>
       <div className={styles.App}>
         <Switch>
-          {/* <Route path="/login">
-            <div>login</div>
-          </Route> */}
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/">
             <>
               <Landing />
