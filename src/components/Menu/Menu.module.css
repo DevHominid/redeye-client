@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+.listItem {
+  transition: 0.2s;
+}
+
 .listItem:hover {
   background: #FA7E61!important;
 }
@@ -25,6 +29,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  font-family: Quicksand;
   font-size: 1.5rem;
   padding: 1rem 3.125rem;
   text-align: left;

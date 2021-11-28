@@ -2,9 +2,12 @@
   border: 0;
   color: #fff;
   cursor: pointer;
+  font-family: Quicksand;
   font-size: 1.5rem;
+  font-weight: 400;
   opacity: 0.5;
   padding: 1rem;
+  transition: 0.2s;
 }
 
 .Button:disabled {
