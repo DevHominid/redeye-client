@@ -10,14 +10,14 @@ export interface ServicesState {
 
 const initialState: ServicesState = {
   activeService: undefined,
-  services: [mockService],
+  services: [...mockService],
 };
 
 export const servicesSlice = createSlice({
   name: 'services',
   initialState,
   reducers: {
-    setActiveService: (state, action: PayloadAction<Service>) => {
+    setActiveService: (state, action: PayloadAction<Service | undefined>) => {
       state.activeService = action.payload;
     },
   }

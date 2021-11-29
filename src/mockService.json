@@ -1,87 +1,452 @@
-{
-  "id": "demo",
-  "name": "Example Service One",
-  "corsDomains": [],
-  "login": {
-    "enabled": true,
-    "endpoint": "/login",
-    "path": "/auth"
-  },
-  "register": {
-    "enabled": true,
-    "endpoint": "/register",
-    "path": "/auth",
-    "public": true
-  },
-  "routers" : [
-    {
-      "basePath": "/api",
-      "routes": [
-        {
-          "public": true,
-          "type": "proxy",
-          "endpoint": "/legistlators/:id",
-          "method": "get",
-          "proxyRequest": {
-            "auth": {
-              "type": "API Key",
-              "key": "apikey",
-              "envKey": "PROXY_API_KEY",
-              "method": "query params"
-            },
-            "contentTypeOverrides": {
-              "json": ["text/html"]
-            },
-            "headers": [],
-            "dataPath": ["response", "legislator"],
-            "params": [
-              {
-                "name": "id",
-                "type": "route"
-              }, 
-              {
-                "name": "output",
-                "type": "query"
-              }
-            ],
-            "url": "api/?method=getLegislators&id=$id$&output=$output$",
-            "envHostName": "PROXY_HOSTNAME"
-          }
-        }
-      ]
+[
+  {
+    "id": "demo",
+    "name": "Example Service One",
+    "cors": {
+      "domains": [],
+      "enabled": true
     },
-    {
-      "path": "/test",
-      "routes": [
-        {
-          "public": false,
-          "type": "proxy",
-          "endpoint": "/getLegislators",
-          "method": "get",
-          "proxyRequest": {
-            "auth": {
-              "type": "API Key",
-              "key": "apikey",
-              "envKey": "PROXY_API_KEY",
-              "method": "query params"
-            },
-            "headers": [],
-            "dataPath": [],
-            "params": [
-              {
-                "name": "id",
-                "type": "query"
-              }, 
-              {
-                "name": "output",
-                "type": "query"
-              }
-            ],
-            "url": "api/?method=getLegislators&id=$id$&output=$output$",
-            "envHostname": "PROXY_HOSTNAME"
+    "login": {
+      "enabled": true,
+      "endpoint": "/login",
+      "path": "/auth"
+    },
+    "register": {
+      "enabled": true,
+      "endpoint": "/register",
+      "path": "/auth",
+      "public": true
+    },
+    "routers" : [
+      {
+        "basePath": "/api",
+        "routes": [
+          {
+            "public": true,
+            "type": "proxy",
+            "endpoint": "/legistlators/:id",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "contentTypeOverrides": {
+                "json": ["text/html"]
+              },
+              "headers": [],
+              "dataPath": ["response", "legislator"],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "route"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostName": "PROXY_HOSTNAME"
+            }
           }
-        }
-      ]
-    }
-  ]
-}
+        ]
+      },
+      {
+        "path": "/test",
+        "routes": [
+          {
+            "public": false,
+            "type": "proxy",
+            "endpoint": "/getLegislators",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "headers": [],
+              "dataPath": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "query"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostname": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo2",
+    "name": "Example Service Two",
+    "cors": {
+      "domains": [],
+      "enabled": true
+    },
+    "login": {
+      "enabled": true,
+      "endpoint": "/login",
+      "path": "/auth"
+    },
+    "register": {
+      "enabled": true,
+      "endpoint": "/register",
+      "path": "/auth",
+      "public": true
+    },
+    "routers" : [
+      {
+        "basePath": "/api",
+        "routes": [
+          {
+            "public": true,
+            "type": "proxy",
+            "endpoint": "/legistlators/:id",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "contentTypeOverrides": {
+                "json": ["text/html"]
+              },
+              "headers": [],
+              "dataPath": ["response", "legislator"],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "route"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostName": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/test",
+        "routes": [
+          {
+            "public": false,
+            "type": "proxy",
+            "endpoint": "/getLegislators",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "headers": [],
+              "dataPath": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "query"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostname": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo3",
+    "name": "Example Service Three",
+    "cors": {
+      "domains": [],
+      "enabled": true
+    },
+    "login": {
+      "enabled": true,
+      "endpoint": "/login",
+      "path": "/auth"
+    },
+    "register": {
+      "enabled": true,
+      "endpoint": "/register",
+      "path": "/auth",
+      "public": true
+    },
+    "routers" : [
+      {
+        "basePath": "/api",
+        "routes": [
+          {
+            "public": true,
+            "type": "proxy",
+            "endpoint": "/legistlators/:id",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "contentTypeOverrides": {
+                "json": ["text/html"]
+              },
+              "headers": [],
+              "dataPath": ["response", "legislator"],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "route"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostName": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/test",
+        "routes": [
+          {
+            "public": false,
+            "type": "proxy",
+            "endpoint": "/getLegislators",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "headers": [],
+              "dataPath": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "query"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostname": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo4",
+    "name": "Example Service Four",
+    "cors": {
+      "domains": [],
+      "enabled": true
+    },
+    "login": {
+      "enabled": true,
+      "endpoint": "/login",
+      "path": "/auth"
+    },
+    "register": {
+      "enabled": true,
+      "endpoint": "/register",
+      "path": "/auth",
+      "public": true
+    },
+    "routers" : [
+      {
+        "basePath": "/api",
+        "routes": [
+          {
+            "public": true,
+            "type": "proxy",
+            "endpoint": "/legistlators/:id",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "contentTypeOverrides": {
+                "json": ["text/html"]
+              },
+              "headers": [],
+              "dataPath": ["response", "legislator"],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "route"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostName": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/test",
+        "routes": [
+          {
+            "public": false,
+            "type": "proxy",
+            "endpoint": "/getLegislators",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "headers": [],
+              "dataPath": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "query"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostname": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo5",
+    "name": "Example Service Five",
+    "cors": {
+      "domains": [],
+      "enabled": true
+    },
+    "login": {
+      "enabled": true,
+      "endpoint": "/login",
+      "path": "/auth"
+    },
+    "register": {
+      "enabled": true,
+      "endpoint": "/register",
+      "path": "/auth",
+      "public": true
+    },
+    "routers" : [
+      {
+        "basePath": "/api",
+        "routes": [
+          {
+            "public": true,
+            "type": "proxy",
+            "endpoint": "/legistlators/:id",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "contentTypeOverrides": {
+                "json": ["text/html"]
+              },
+              "headers": [],
+              "dataPath": ["response", "legislator"],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "route"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostName": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/test",
+        "routes": [
+          {
+            "public": false,
+            "type": "proxy",
+            "endpoint": "/getLegislators",
+            "method": "get",
+            "proxyRequest": {
+              "auth": {
+                "type": "API Key",
+                "key": "apikey",
+                "envKey": "PROXY_API_KEY",
+                "method": "query params"
+              },
+              "headers": [],
+              "dataPath": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": "query"
+                }, 
+                {
+                  "name": "output",
+                  "type": "query"
+                }
+              ],
+              "url": "api/?method=getLegislators&id=$id$&output=$output$",
+              "envHostname": "PROXY_HOSTNAME"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

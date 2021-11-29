@@ -1,6 +1,7 @@
-import React from 'react';
-import { useAppSelector } from '../../app/hooks';
-import { selectActiveService } from '../../slices/services';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { selectActiveService, setActiveService } from '../../slices/services';
 import { calculateRoutes } from './utils';
 import Button from '../Button';
 import DashboardLink from './DashboardLink';
@@ -9,12 +10,17 @@ import { ReactComponent as UFOIcon } from '../../assets/img/ufo.svg';
 import styles from './Dashboard.module.css';
 
 function Dashboard() {
+  const [menuActive, toggleMenuActive] = useState(false);
   const activeService = useAppSelector(selectActiveService);
+  const dispatch = useAppDispatch();
 
   return (
     <div className={styles.Dashboard}>
-      <Menu />
+      <Menu menuActive={menuActive} toggleMenuActive={toggleMenuActive} />
       <div className={styles.container}>
+        <button className={styles.menuToggle} onClick={() => toggleMenuActive(!menuActive)}>
+          <FontAwesomeIcon icon={['fas', 'bars']} />
+        </button>
         {activeService ? (
           <div className={styles.serviceWrapper}>
             <h1>{activeService.name}</h1>
@@ -36,7 +42,9 @@ function Dashboard() {
               <ul>
                 <li>
                   <span>CORS:</span>
-                  <span>{}</span>
+                  <span className={activeService.cors.enabled ? styles.enabledText : styles.disabledText}>
+                    {activeService.cors.enabled ? 'Enabled' : 'Disabled'}
+                  </span>
                 </li>
                 <li>
                   <span>Login:</span>
@@ -63,7 +71,7 @@ function Dashboard() {
                 text="Generate Service"
               />
               <Button
-                clickHandler={() => console.log('clicked')}
+                clickHandler={() => dispatch(setActiveService(undefined))}
                 color="#1F1F1F"
                 text="Back"
               />
