@@ -8,6 +8,11 @@
   justify-content: center;
   padding: 1.5rem 0;
   text-decoration: none;
+  transition: background 0.2s linear;
+}
+
+.DashboardLink:active, .DashboardLink:hover {
+  background: #FA7E61;
 }
 
 .DashboardLink:last-child {
