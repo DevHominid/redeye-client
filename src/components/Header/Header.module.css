@@ -1,4 +1,6 @@
 .Header {
   background: #E24328;
-  height: 90px;
+  flex-shrink: 0;
+  /* height: 90px; */
+  height: 50px;
 }

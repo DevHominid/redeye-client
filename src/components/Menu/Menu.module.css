@@ -1,20 +1,57 @@
 .Menu {
   background: #fff;
-  padding: 1.25rem 0;
-  width: 380px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 calc(1rem + 14px) 0 0;
+  position: absolute;
+  transition: transform 0.2s linear;
+  transform: translateX(-100%);
+  width: 100%;
+  z-index: 1;
+}
+.Menu.active {
+  transform: translateX(0);
+}
+
+.menuToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  z-index: 1;
 }
 
 .Menu h1 {
   border-bottom: 1px solid #D8D8D8;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin: 0;
-  padding: 0 3.125rem 1.25rem 3.125rem;
+  padding: 1.25rem 3.125rem 1.25rem 3.125rem;
+}
+
+.listWrapper {
+  flex-grow: 1;
+  position: relative;
 }
 
 .Menu ul {
+  bottom: 0;
+  height: 100%;
+  left: 0;
   list-style: none;
   margin: 0;
+  overflow-y: auto;
   padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 .listItem {
@@ -30,8 +67,47 @@
   border: none;
   cursor: pointer;
   font-family: Quicksand;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: 0.875rem;
   padding: 1rem 3.125rem;
   text-align: left;
   width: 100%;
+}
+
+@media screen and (min-width: 48rem) and (min-height: 29.375rem) {
+  .Menu {
+    background: rgba(15, 9, 5, 0.98);
+    flex-basis: calc(1rem + 14px);
+    position: static;
+    transform: translateX(calc(-100% + 1rem + 14px));
+    width: auto;
+  }
+  .Menu.active {
+    background: #fff;
+    flex-basis: 280px;
+  }
+
+  .Menu .menuToggle {
+    color: #fff
+  }
+  .Menu.active .menuToggle {
+    color: #000
+  }
+
+  .Menu h1 {
+    border-bottom: none;
+  }
+  .Menu.active h1 {
+    border-bottom: 1px solid #D8D8D8;
+  }
+}
+
+@media screen and (min-width: 85.375rem) and (min-height: 29.375rem) {
+  .Menu.active {
+    flex-basis: 320px;
+  }
+
+  /* .Menu h1 {
+    font-size: 2rem;
+  } */
 }

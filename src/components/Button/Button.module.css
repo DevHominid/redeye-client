@@ -4,13 +4,11 @@
   color: #fff;
   cursor: pointer;
   font-family: Quicksand;
-  /* font-size: 1.5rem; */
   font-size: .75rem;
   font-weight: 400;
   opacity: 0.5;
   padding: .75rem 1rem;
-  /* padding: 1rem; */
-  transition: 0.2s;
+  transition: opacity 0.2s linear;
 }
 
 .Button:disabled {
@@ -20,4 +18,18 @@
 
 .Button:hover {
   opacity: 1;
+}
+
+@media screen and (min-width: 48rem) and (min-height: 29.375rem) {
+  .Button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 85.375rem) and (min-height: 29.375rem) {
+  .Button {
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { setActiveService } from '../../slices/services';
 import styles from './Menu.module.css';
 

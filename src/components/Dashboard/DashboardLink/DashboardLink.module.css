@@ -4,12 +4,15 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   justify-content: center;
-  margin-right: 2rem;
-  padding: 4rem 0;
+  padding: 1.5rem 0;
   text-decoration: none;
+  transition: background 0.2s linear;
+}
+
+.DashboardLink:active, .DashboardLink:hover {
+  background: #FA7E61;
 }
 
 .DashboardLink:last-child {
@@ -18,4 +21,11 @@
 
 .DashboardLink span {
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 85.375rem) and (min-height: 29.375rem) {
+  .DashboardLink {
+    font-size: 1.75rem;
+    padding: 4rem 0;
+  }
 }
