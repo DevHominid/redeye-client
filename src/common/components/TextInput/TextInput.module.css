@@ -1,0 +1,18 @@
+.TextInput {
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s linear;
+}
+
+.TextInput input {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+.TextInput input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}

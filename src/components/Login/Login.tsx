@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
-import Button from '../Button';
+import { Link, useHistory } from 'react-router-dom';
+import Button from '../../common/components/button';
 import ufoIcon from '../../assets/img/ufo-landed-icon.svg'; 
 import styles from './Login.module.css';
 
 function Login() {
+  const history = useHistory();
+
   return (
     <div className={styles.Login}>
       <div className={styles.headerWrapper}>
@@ -21,7 +23,7 @@ function Login() {
             <input placeholder="Email" />
             <input placeholder="Password" />
             <Button
-              clickHandler={() => console.log('clicked login')}
+              clickHandler={() => history.push('/services')}
               text="Log in"
             />
             <Link to="/sign-up">Sign Up</Link>

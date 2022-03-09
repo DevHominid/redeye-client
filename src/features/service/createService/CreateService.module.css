@@ -1,0 +1,3 @@
+.CreateService{
+  composes: resourceFormContainer from '../../../common/global.module.css';
+}

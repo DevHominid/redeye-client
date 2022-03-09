@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 85.375rem) and (min-height: 29.375rem) {
   .Button {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     padding: 1rem;
   }
 }

@@ -1,10 +1,20 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHdd } from '@fortawesome/free-regular-svg-icons';
-import { faBars, faDatabase, faLock, faToolbox } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faDatabase,
+  faLock,
+  faToolbox,
+  faTrashAlt
+} from '@fortawesome/free-solid-svg-icons';
+import { useAppDispatch } from '../../app/hooks';
+import { fetchServicesFromStorage } from '../../common/StorageUtils';
+import { setServices } from '../../slices/services';
 import Dashboard from '../Dashboard';
-import Footer from '../Footer';
-import Header from '../Header';
+import Footer from '../../features/footer';
+import Header from '../../features/header';
 import Landing from '../Landing';
 import Login from '../Login';
 import styles from './App.module.css';
@@ -14,15 +24,27 @@ library.add(
   faDatabase,
   faHdd,
   faLock,
-  faToolbox
+  faToolbox,
+  faTrashAlt
 );
-console.dir(library);
 
 function App() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(setServices(fetchServicesFromStorage()));
+  }, [dispatch]);
+
   return (
     <Router>
       <div className={styles.App}>
-        {/* <Switch>
+        <Switch>
+          <Route path="/services">
+            <div className={styles.container}>
+              <Header />
+              <Dashboard />
+            </div>
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
@@ -32,11 +54,7 @@ function App() {
               <Footer />
             </>
           </Route>
-        </Switch> */}
-        <div className={styles.container}>
-          <Header />
-          <Dashboard />
-        </div>
+        </Switch>
       </div>
     </Router>
   );

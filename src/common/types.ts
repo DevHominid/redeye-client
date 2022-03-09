@@ -24,9 +24,9 @@ export interface CORS {
 }
 
 export interface LoginRoute {
+  basePath: string;
   enabled: boolean;
   endpoint: string;
-  path: string;
 }
 
 enum HttpMethod {
@@ -57,17 +57,17 @@ export interface ProxyAuth {
   key: string;
 }
 
-export interface ProxyRequestParam {
+export interface RequestParam {
   name: string;
-  type: ProxyRequestParamTypes;
+  type: RequestParamTypes;
 }
 
-enum ProxyRequestParamType {
+enum RequestParamType {
   'route',
   'query',
 }
 
-export type ProxyRequestParamTypes = keyof typeof ProxyRequestParamType;
+export type RequestParamTypes = keyof typeof RequestParamType;
 
 export interface ProxyRequest {
   auth: ProxyAuth;
@@ -75,7 +75,7 @@ export interface ProxyRequest {
   dataPath: string[];
   envHostName: string;
   headers: ProxyRequestHeader[];
-  params: ProxyRequestParam[];
+  params: RequestParam[];
   url: string;
 }
 
@@ -89,9 +89,9 @@ export interface ProxyRoute extends Route {
 }
 
 export interface RegisterRoute {
+  basePath: string;
   enabled: boolean;
   endpoint: string;
-  path: string;
   public: boolean;
 }
 
@@ -103,8 +103,14 @@ export interface Route {
   endpoint: string;
   method: HttpMethods;
   public: boolean;
-  type: string;
+  type: RouteTypes;
 }
+
+enum RouteType {
+  'reverseProxy'
+}
+
+export type RouteTypes = keyof typeof RouteType;
 
 export interface Router {
   basePath: string;
@@ -116,6 +122,7 @@ export interface Service {
   cors: CORS;
   login: LoginRoute;
   name: string;
+  port: number;
   register: RegisterRoute;
   routers: Router[];
 }

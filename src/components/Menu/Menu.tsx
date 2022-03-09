@@ -1,3 +1,4 @@
+import { useHistory, useRouteMatch } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { selectActiveService, selectServices } from '../../slices/services';
@@ -11,8 +12,10 @@ type MenuProps = {
 
 function Menu({ menuActive, toggleMenuActive }: MenuProps) {
   const dispatch = useAppDispatch();
+  const history = useHistory();
   const activeService = useAppSelector(selectActiveService);
   const services = useAppSelector(selectServices);
+  const { url } = useRouteMatch();
 
   return (
     <div className={`${styles.Menu} ${menuActive ? styles.active : ''}`}>
@@ -21,7 +24,15 @@ function Menu({ menuActive, toggleMenuActive }: MenuProps) {
       </button>
       <h1>Services</h1>
       <div className={styles.listWrapper}>
-        <ul>{listServices(activeService, services, dispatch)}</ul>
+        <ul>
+          {listServices(
+            activeService,
+            dispatch,
+            history,
+            services,
+            url
+          )}
+        </ul>
       </div>
     </div>
   );

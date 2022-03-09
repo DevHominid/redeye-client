@@ -2,6 +2,7 @@
   {
     "id": "demo",
     "name": "Example Service One",
+    "port": 8080,
     "cors": {
       "domains": [],
       "enabled": true
@@ -9,12 +10,12 @@
     "login": {
       "enabled": true,
       "endpoint": "/login",
-      "path": "/auth"
+      "basePath": "/auth"
     },
     "register": {
       "enabled": true,
       "endpoint": "/register",
-      "path": "/auth",
+      "basePath": "/auth",
       "public": true
     },
     "routers" : [
@@ -55,7 +56,7 @@
         ]
       },
       {
-        "path": "/test",
+        "basePath": "/test",
         "routes": [
           {
             "public": false,
